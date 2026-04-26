@@ -22,42 +22,75 @@ function answerNo() {
     document.getElementById("noMsg").innerText = "😒 Not allowed! Try again 😂";
 }
 
-// 🎁 BOX OPEN
 function openBox(el, num) {
     el.classList.add("open");
 
     setTimeout(() => {
-        openPage(num);
+        openPage(num); // pass correctly
     }, 600);
 }
 
-// 📄 PAGE CONTENT
 function openPage(num) {
     showScreen("view-screen");
-    let content = document.getElementById("view-content");
+
+    const content = document.getElementById("view-content");
+
+    // force number (critical)
+    num = parseInt(num);
+
+    console.log("Opening:", num); // 🔥 debug
 
     if (num === 1) {
-        content.innerHTML = "<h2>Memories 💖</h2><p>Add your images here</p>";
+        content.innerHTML = `
+            <div class="lux-card">
+                <h2>📸 Our Memories</h2>
+                <div class="gallery">
+                    <img src="img1.jpg">
+                    <img src="img2.jpg">
+                    <img src="img3.jpg">
+                </div>
+                <p>Every moment with you is special 💖✨</p>
+            </div>
+        `;
     }
-    if (num === 2) {
-        content.innerHTML = "<h2>Wishes 💌</h2><p>Happy Birthday! 💖</p>";
+
+    else if (num === 2) {
+        content.innerHTML = `
+            <div class="lux-card">
+                <h2>💌 Birthday Wishes</h2>
+                <p>
+                Happy Birthday 🎉💖<br><br>
+                You are my happiness ✨<br>
+                Stay amazing always 💫
+                </p>
+            </div>
+        `;
     }
-    if (num === 3) {
-        content.innerHTML = "<h2>Prayer 🙏</h2><p>God bless you always ✨</p>";
+
+    else if (num === 3) {
+        content.innerHTML = `
+            <div class="lux-card glow-card">
+                <h2>🙏 A Prayer for You</h2>
+                <p>
+                May God bless you with happiness,<br>
+                success and love 💖✨
+                </p>
+            </div>
+        `;
+    }
+
+    else {
+        content.innerHTML = "<h2>Error loading content 😅</h2>";
     }
 }
 
-// BACK
+
 function goBack() {
-    showScreen("boxes-screen");
-}
+    // remove active from all
+    document.querySelectorAll(".screen").forEach(s => {
+        s.classList.remove("active");
+    });
 
-// 💖 FLOATING HEARTS
-for (let i = 0; i < 20; i++) {
-    let h = document.createElement("div");
-    h.className = "heart";
-    h.innerHTML = "💖";
-    h.style.left = Math.random() * 100 + "vw";
-    h.style.animationDuration = (4 + Math.random()*4) + "s";
-    document.body.appendChild(h);
+    // show boxes screen again
+    document.getElementById("boxes-screen").classList.add("active");
 }

@@ -41,31 +41,32 @@
     </div>
 </section>
 
-<!-- 🎁 BOXES -->
 <section id="boxes-screen" class="screen">
     <h1>Choose Your Surprise 🎁</h1>
 
-    <div class="boxes">
+    <div class="boxes">  <!-- ✅ THIS WRAPPER MUST EXIST -->
+
         <div class="gift-box" onclick="openBox(this,1)">
             <div class="gift-lid"></div>
-            <div class="gift-body">📸 Memories</div>
+            <div class="gift-body">📸 <span>Memories</span></div>
         </div>
 
         <div class="gift-box" onclick="openBox(this,2)">
             <div class="gift-lid"></div>
-            <div class="gift-body">💌 Wishes</div>
+            <div class="gift-body">💌 <span>Wishes</span></div>
         </div>
 
         <div class="gift-box" onclick="openBox(this,3)">
             <div class="gift-lid"></div>
-            <div class="gift-body">🙏 Prayer</div>
+            <div class="gift-body">🙏 <span>Prayer</span></div>
         </div>
+
     </div>
 </section>
 
 <!-- 📄 VIEW PAGE -->
 <section id="view-screen" class="screen">
-    <button class="back-btn" onclick="goBack()">⬅ Back</button>
+<button class="back-btn" onclick="goBack()">⬅ Back</button>
     <div id="view-content"></div>
 </section>
 
