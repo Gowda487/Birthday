@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Secret Surprise 🎁</title>
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    
+
+<!-- INTRO SCREEN -->
+<div id="intro-screen">
+    <h1>
+        <span class="line1">🎉 Welcome</span><br>
+        <span class="line2">Birthday Girl 🎂</span>
+    </h1>
+</div>
+
+<!-- MAIN LOGIN -->
+<div id="main-content" class="hidden">
+    <div class="login-container">
+        <img src="bff.png" class="friend-img">
+
+        <h2>🔐 Enter Secret Code</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button onclick="checkPassword()">Unlock 💖</button>
+
+        <p id="error"></p>
+    </div>
+</div>
+
+<script src="index.js"></script>
 </body>
-</html>
+</html>	
+
+
+
