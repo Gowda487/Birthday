@@ -12,20 +12,32 @@
 <!-- 🎂 CAKE SCREEN -->
 <section id="cake-screen" class="screen active">
     <h1>Make a Wish 🎂</h1>
-
-    <div class="cake">
-        <div class="layer bottom-layer"></div>
-        <div class="layer middle-layer"></div>
-        <div class="layer top-layer"></div>
-        <div class="icing"></div>
-
-        <div class="candle">
-            <div class="flame" id="flame"></div>
-        </div>
+<div class="cake">
+    <div class="layer bottom-layer">
+        <span>ABHI 🎉</span>
     </div>
 
-    <button onclick="blowCandle()">Blow Candles 💨</button>
-</section>
+    <div class="layer middle-layer">
+        <span>BIRTHDAY</span>
+    </div>
+
+    <div class="layer top-layer">
+        <span>HAPPY</span>
+    </div>
+
+    <div class="icing"></div>
+
+    <!-- 🎂 MULTIPLE CANDLES -->
+    <div class="candles">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+    </div>
+</div>
+
+<button onclick="blowCandles()">🎂 Blow Candles</button></section>
 
 <!-- ❓ QUESTION -->
 <section id="question-screen" class="screen">
@@ -42,8 +54,7 @@
 </section>
 
 <section id="boxes-screen" class="screen">
-    <h1>Choose Your Surprise 🎁</h1>
-
+<h1>Choose Your Surprise 🎁</h1>
     <div class="boxes">  <!-- ✅ THIS WRAPPER MUST EXIST -->
 
         <div class="gift-box" onclick="openBox(this,1)">
