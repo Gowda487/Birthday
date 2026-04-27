@@ -707,10 +707,10 @@ button {
 
 /* smooth zoom effect */
 .img-frame img {
-    width: 100%;
-    height: 100%;
+    width: 2200%;
+    height:0%;
     object-fit: cover;
-    object-position: top;
+    object-position:left;
     transition: transform 0.3s ease;
 }
 

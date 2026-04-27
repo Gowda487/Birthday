@@ -121,9 +121,7 @@ function openPage(num) {
                     <img src="img6.jpg">
                     <img src="img7.jpg">
                     <img src="img8.jpg">
-                    <img src="img9.jpg" class="top-focus">
                 </div>
-                <p>Every moment with you is special 💖✨</p>
             </div>
         `;
     }
@@ -141,7 +139,7 @@ Happy Birthday to the girl who became my family without even trying 🎂💖 You
     else if (num === 3) {
     content.innerHTML = `
         <div class="glass-card prayer-glow">
-            <h2 class="fade-text">Prayer 🙏</h2>
+            <h2 class="fade-text">Chant 🙏</h2>
 
             <input type="text" id="p1" placeholder="Your wish 1">
             <input type="text" id="p2" placeholder="Your wish 2">

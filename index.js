@@ -9,7 +9,7 @@ setTimeout(() => {
 function checkPassword() {
     const pass = document.getElementById("password").value;
 
-    if (pass === "SHANTABHAI") {
+    if (pass === "SHANTHABHAI") {
         window.location.href = "main.html";
     } else {
         document.getElementById("error").innerText = "❌ Wrong Password!";
